@@ -1,0 +1,6 @@
+<svg width="25" height="70" xmlns="http://www.w3.org/2000/svg">
+   <path stroke="#000000" fill="none" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m10.73999,29.6181l8.00002,-14c2.66699,4.66669 5.33299,9.3333 8,14" transform="rotate(-180 14.74 22.6181)"/>
+   <path stroke="#000000" fill="none" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m10.89999,17.4837l8,-13.99998c2.66701,4.66671 5.33301,9.33328 8,13.99998" transform="rotate(-180 14.9 10.4837)"/>
+   <line stroke="#000000" fill="none" stroke-width="4" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="10.75" y1="29.25" x2="10.75" y2="60.79428"/>
+   <rect ry="1" rx="1" stroke="#000000" class="node" fill="none" stroke-width="5" x="9.13573" y="60.08923" height="3" width="4"/>
+</svg>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Breaker control</title>
+    <meta name="description" content="Breaker control">
+    <meta name="author" content="David Perez">
+    <meta name="viewport" content="width=device-width">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="app/stylesheets/style.css" rel="stylesheet" type="text/css">
+
+    <style>
+        body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+        }
+    </style>
+
+
+    <script data-main="app/javascript/app" src="assets/js/require.js"></script>
+
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="container">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="#">Breaker control</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li><a href="../">Home</a></li>
+                                <li class="active"><a href="#">Documentation</a></li>
+                                <li><a href="breaker_control_v3.zip">Source code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1>Documentation of the web application</h1>
+                <hr>
+
+                <h2>Abstract</h2>
+                <p>
+                    This web application is a demostration of a modern and non-trivial javascript application that helps to design an electrical network composed by feeders, bus bars and circuit breakers, and simulating the power flow of an electrical network. As a plus, the application shows a report of the status of the breakers and plot a curve in svg.
+                </p>
+                <hr>
+
+                <h2>Demo</h2>
+                <a href="docs/video.mp4">Download video</a>
+
+                <h2>Description of the web application, from a computational perspective</h2>
+                <h3>Levels of abstraction</h3>
+                <h4>First level of abstraction</h4>
+                    At this level I use libraries. These libraries abstract the HTML DOM, SVG DOM access and ECMAScript APIs from diferent versions. Also, it handles common browser incompatibilities and lack of implementations through a good API.
+                <h5>Libraries, frameworks and plugins:</h5>
+                <ul>
+                    <li>jquery</li>
+                    <li>jquery-ui</li>
+                    <li>jquery.svg.js</li>
+                    <li>jquery.svgdom.js</li>
+                    <li>jquery.svgplot.js</li>
+                    <li>underscore.js</li>
+                    <li>bootstrap.js</li>
+                </ul>
+                <h4>Second level of abstraction</h4>
+                    At this level of abstraction I use a flexible framework called backbone.js which offers a minimalist solution to separating concerns in the application. Support for persistence layer and RESTful/JSON sync (ajax), models, views (with controllers), event-driven communication, templating and routing. 
+                
+                <h5>Libraries, frameworks and plugins:</h5>
+                <ul>
+                    <li>backbone.js</li>
+                    <li>backbone.localStorage.js</li>
+                </ul>
+                
+                <h5>Architecture at this level of abstraction:</h5>
+                At this level, I create several applications independently (called widgets), and, I wire these tiny applications at the next level of abstraction. The files of each tiny application are in different folders (see the folders at <code>$APPLICATION_ROOT/app/javascript/widgets/</code>).
+                
+                <h5>Most important design patterns used at this level of abstraction:</h5>
+                <ul>
+                    <li>MVVM</li>
+                </ul>
+
+                <h4>Third level of abstraction</h4>
+                At this level I use a scalable, event-driven JavaScript architecture for developing widget-based applications, with the help of Aura.js. It takes advantage of patterns and best practices for developing maintainable applications and gives you greater control over widget-based development. Aura gives you complete control of a widget's lifecycle, allowing me to dynamically start, stop, reload and clean-up parts of their application as needed.
+                
+                <h5>Libraries, frameworks and plugins:</h5>
+                <ul>
+                    <li>aura.js</li>
+                    <li>require.js</li>
+                    <li>text.js</li>
+                </ul>
+                
+                <h5>Folder structure at this level of abstraction:</h5>
+                The following paths contains customized code for aura.js.
+                <code>$APPLICATION_ROOT/app/javascript/core/</code>,
+                <code>$APPLICATION_ROOT/app/javascript/sandbox/</code>
+                and 
+                <code>$APPLICATION_ROOT/app/javascript/security/</code>.
+
+                <h5>Most important design patterns used at this level of abstraction:</h5>
+                <ul>
+                    <li>mediator</li>
+                    <li>facade</li>
+                    <li>publisher/subscriber</li>
+                </ul>
+
+                <h3>Comments about the implementation of some features</h3>
+                <ul>
+                    <li><strong>Collision detection:</strong> I implemented my own, custom collision detection system to detect where the circuits are connected when the user drop an equipment at the svg stage (see next item). <a href="./app/javascript/widgets/single-line-diagram/views/ConectivityView.js">[source code]</a> </li>
+                    <li><strong>Drag and drop of electrical equipments represented as svg:</strong> I implemented a very basic and uncomplete drag and drop system to design the topology of the system.</li>
+                </ul>
+
+
+                <h3>Folder structure of the project</h3>
+                <img src="docs/directory.PNG">
+
+                <h3>Tools used on the project</h3>
+                <h4>IDE: Sublime Text 2</h4>
+                <img src="docs/sublime.PNG">
+                
+                <h4>SVG Editor: SVG-Edit</h4>
+                <img src="docs/SVG-edit1.png">
+                <img src="docs/SVG-edit2.png">
+
+                <h4>Chrome inspector</h4>
+                <img src="docs/chrome-inspector-1A.png">
+                <img src="docs/chrome-inspector-2A.png">
+                
+                <hr>
+                <h2>The bussiness logic: Description of the web application from an electrical perspective</h2>
+
+                The widget <code>single-line-diagram</code> is the most complex at this application because in order to implement the behaviour of the application a background in power flow analysys and electrical automation are required.
+
+                <h3>The requirements</h3>
+                <ol>
+                    <li>The application must be able to represent  circuit breakers, feeders, bus bars.</li>
+                    <li>The user must be able to insert these components</li>
+                    <li>The application can simulate the flow of the power on the busbars connected to one or more feeders in conformance with the Kirchhoff law.</li>
+                    <li>The user must be able to change the status (open|close) of the circuit breakers and run the simulation again.</li>
+                </ol>
+
+                <h3>The solution of the requirement number 3</h3>
+                <p>
+                    In this section I will describe only the requirement number 3, which is the most sofisticated from the electrical engineering perspective. 
+                </p>
+                <p>
+                    They are some considerations in order to plot consistently (in all the cases) a simulated state of an electrical topology designed dynamically by the user. In order to solve that, I am using some mathematical tools from power analysis: 
+                    <ol>
+                        <li>Kirchhoff's circuit laws</li>
+                        <li>Theory of electrical power flow and its underlying math (graph theory), including:</li>
+                        <ul>
+                            <li>Incidence matrix</li>
+                            <li>Connected component (I am not sure about the translation. In spanish, we call it "gráficos conexos")</li>
+                        </ul>
+                    </ol>
+
+                    Basically, I calculate the incidence matrix of the electrical topology designed dynamically by the user, verify on which bus bar (vertex) the feeder is connected, and then I populate and paint each vertex of the graph starting from the feeder vertex.
+
+                    I populate the graph using a computational algorithm called BFS (breadth-first search).
+
+                    So, each connected graph that contains a feeder will be energized, and the isolated graphs without feeders will be not energized. <a href="./app/javascript/widgets/single-line-diagram/views/PowerFlowView.js">[source</a> <a href="./app/javascript/widgets/single-line-diagram/models/Topology.js">code]</a>
+                </p>
+
+                <h3>Related work</h3>
+                <a href="http://www.google.com/patents/US8121740"><strong>Patent</strong>: Feeder automation for an electric power distribution system</a>, by ABB Research Ltd.
+                
+                <h3>Screenshots of the project</h3>
+                <img src="docs/scr1.png">
+                <img src="docs/scr2.png">
+                <img src="docs/scr3.png">
+                <img src="docs/scr4.png">
+                <img src="docs/scr5.png">
+                <img src="docs/scr6.png">
+                <img src="docs/scr7.png">
+                
+                <h3>Bugs to be fixed</h3>
+                <ul>
+                    <li>The busbar where the feeder is connected must be orange instead of black. </li>
+                    <li>The drag and drop of electrical components doesn't work properly</li>
+                </ul>            
+
+                <h3>Browser compatibility</h3>
+                Considering that this is just a demostration and not a production code, this application was tested only in Chromium 27.0.1423.0 (184476).
+
+                <hr>
+
+                <footer>
+                    <p>&copy; David Daniel Perez Sosa 2013</p>
+                </footer>
+
+            </div> <!-- /container -->
+
+
+    </div>
+
+
+</body>
+</html>

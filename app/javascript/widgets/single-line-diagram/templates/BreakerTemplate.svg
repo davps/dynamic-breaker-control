@@ -1,0 +1,8 @@
+<svg width="33" height="143" xmlns="http://www.w3.org/2000/svg">
+  <path class="center" d="m12.363,50.0418c9.15199,0 16.56598,7.9576 16.56598,17.7819c0,9.8243 -7.41399,17.7823 -16.56598,17.7823" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none" stroke="#000000" id="svg_1"/>
+  <rect height="6.61224" width="3" y="64.99388" x="12.3" stroke-opacity="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="50" fill="none" class="transparent-hoverable-btn center" stroke="#000000" id="svg_2"/>
+  <line y2="2.41173" x2="4.67105" y1="49.40674" x1="4.67105" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none" stroke="#000000" id="svg_3"/>
+  <line y2="87.19327" x2="4.67105" y1="134.18828" x1="4.67105" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none" stroke="#000000" id="svg_4"/>
+  <rect ry="1" rx="1" width="4" height="3" y="135.8" x="2.8" stroke-width="5" fill="none" class="node" stroke="#000000" id="svg_5"/>
+  <rect ry="1" rx="1" width="4" height="3" y="2.9" x="2.8" stroke-width="5" fill="none" class="node" stroke="#000000" id="svg_6"/>
+</svg>

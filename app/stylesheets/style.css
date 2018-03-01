@@ -1,0 +1,30 @@
+.transparent-hoverable-btn{
+	cursor: pointer;
+}
+
+.breaker, .busbar, .feeder {
+	cursor: move;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.breaker.over {
+  border: 2px dashed #000;
+}
+
+.connected {
+	stroke: red;
+}
+
+.conductingEquipment.energized line{
+	stroke: yellow;
+}
+
+svg {
+	/*position:absolute;*/
+	background:#fff; 
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+}
