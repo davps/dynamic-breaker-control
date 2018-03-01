@@ -16,6 +16,11 @@ http://davps.s3-website-us-east-1.amazonaws.com/docs.html
 Source code:
 https://github.com/davps/dynamic-breaker-control
 
+###Motivation
+I developed this small project to demostrate my skillsets for both, 
+javascript development and electrical engineering for a job
+interview I had in 2013 (Which, by the way, helped me to land an awesome job).
+
 ### How to run the web app
 Just download the code and run it from an http server. It doesn't work if you run it on the browser from the local file (you need localhost or something). 
 
