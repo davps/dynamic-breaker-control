@@ -2,6 +2,10 @@
 
 This web application is a demostration of a modern and non-trivial javascript application that helps to design an electrical network composed by feeders, bus bars and circuit breakers, and simulating the power flow of an electrical network.
 
+The interesting stuff is on the single-line-diagram widget, available here:
+https://github.com/davps/dynamic-breaker-control/tree/master/app/javascript/widgets/single-line-diagram
+(the rest of the code are implementation of well known design patterns)
+
 Recorded video demo:
 https://www.youtube.com/watch?v=JSmGw_cU2-I
 
