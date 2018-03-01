@@ -4,7 +4,7 @@ This web application is a demostration of a modern and non-trivial javascript ap
 
 The interesting stuff is on the single-line-diagram widget, available here:
 https://github.com/davps/dynamic-breaker-control/tree/master/app/javascript/widgets/single-line-diagram
-(the rest of the code are implementation of well known design patterns)
+(the rest of the code are jsut implementations of well known design patterns)
 
 Recorded video demo:
 https://www.youtube.com/watch?v=JSmGw_cU2-I
@@ -20,7 +20,7 @@ http://davps.s3-website-us-east-1.amazonaws.com/docs.html
 Source code:
 https://github.com/davps/dynamic-breaker-control
 
-###Motivation
+### Motivation
 I developed this small project to demostrate my skillsets for both, 
 javascript development and electrical engineering for a job
 interview I had in 2013 (Which, by the way, helped me to land an awesome job).
