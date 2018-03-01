@@ -3,9 +3,9 @@
 This web application is a demostration of a modern and non-trivial javascript application that helps to design an electrical network composed by feeders, bus bars and circuit breakers, and simulating the power flow of an electrical network.
 
 Recorded video demo:
-https://www.youtube.com/watch?v=eann_et7oao
+https://www.youtube.com/watch?v=JSmGw_cU2-I
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eann_et7oao/0.jpg)](https://www.youtube.com/watch?v=eann_et7oao)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/JSmGw_cU2-I/0.jpg)](https://www.youtube.com/watch?v=JSmGw_cU2-I)
 
 Live demo:
 http://davps.s3-website-us-east-1.amazonaws.com
