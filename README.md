@@ -2,6 +2,9 @@
 
 This web application is a demostration of a modern and non-trivial javascript application that helps to design an electrical network composed by feeders, bus bars and circuit breakers, and simulating the power flow of an electrical network.
 
+Recorded video demo:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eann_et7oao/0.jpg)](https://www.youtube.com/watch?v=eann_et7oao)
+
 Live demo:
 http://davps.s3-website-us-east-1.amazonaws.com
 
@@ -11,7 +14,7 @@ http://davps.s3-website-us-east-1.amazonaws.com/docs.html
 Source code:
 https://github.com/davps/dynamic-breaker-control
 
-## How to run the web app
+### How to run the web app
 Just download the code and run it from an http server. It doesn't work if you run it on the browser from the local file (you need localhost or something). 
 
 I usually use this HTTP server for that: https://github.com/indexzero/http-server and if you will use the same server then these are the steps:
